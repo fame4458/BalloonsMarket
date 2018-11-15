@@ -20,10 +20,10 @@
                     <a class="nav-link js-scroll-trigger" href="Birthday">BIRTHDAY</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#services">Services</a>
+                    <a class="nav-link js-scroll-trigger" href="Party">PARTY</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+                    <a class="nav-link js-scroll-trigger" href="Celebrate">CELEBRATE</a>
                 </li>
             </ul>
         </div>

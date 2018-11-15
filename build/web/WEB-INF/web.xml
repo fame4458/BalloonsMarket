@@ -8,6 +8,14 @@
         <servlet-name>BirthdayServlet</servlet-name>
         <servlet-class>servlet.BirthdayServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>PartyServlet</servlet-name>
+        <servlet-class>servlet.PartyServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CelebrateServlet</servlet-name>
+        <servlet-class>servlet.CelebrateServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>test</servlet-name>
         <url-pattern>/test</url-pattern>
@@ -15,6 +23,14 @@
     <servlet-mapping>
         <servlet-name>BirthdayServlet</servlet-name>
         <url-pattern>/Birthday</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PartyServlet</servlet-name>
+        <url-pattern>/Party</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CelebrateServlet</servlet-name>
+        <url-pattern>/Celebrate</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

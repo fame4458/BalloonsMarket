@@ -1,6 +1,6 @@
 <%-- 
-    Document   : Birthday
-    Created on : Nov 15, 2018, 7:44:06 PM
+    Document   : Party
+    Created on : Nov 15, 2018, 8:46:27 PM
     Author     : SarinratBeauty
 --%>
 
@@ -17,7 +17,7 @@
     <body>
         <jsp:include page="include/Navbar.jsp" />
         <div class="container my-5">
-            <h1 class="text-center mt-5">Birth Day set</h1>
+            <h1 class="text-center mt-5">Party set</h1>
             <div class="row mt-5">
                 <c:forEach items="${product}" var="p" varStatus="vs">
                     <div class="col-lg-4 col-sm-6 portfolio-item mt-5">

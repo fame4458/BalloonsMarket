@@ -15,7 +15,6 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import javax.transaction.UserTransaction;
 import model.Product;
 import model.controller.ProductJpaController;
@@ -24,18 +23,19 @@ import model.controller.ProductJpaController;
  *
  * @author SarinratBeauty
  */
-public class BirthdayServlet extends HttpServlet {
+public class CelebrateServlet extends HttpServlet {
 
     @PersistenceUnit(unitName = "BalloonsMarketPU1")
     EntityManagerFactory emf;
     @Resource
     UserTransaction utx;
+
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         ProductJpaController pCtrl = new ProductJpaController(utx, emf);
-        List<Product> p = pCtrl.findType("birth");
+        List<Product> p = pCtrl.findType("celebrate");
         request.setAttribute("product", p);
-        getServletContext().getRequestDispatcher("/Birthday.jsp").forward(request, response);
+        getServletContext().getRequestDispatcher("/Celebrate.jsp").forward(request, response);
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

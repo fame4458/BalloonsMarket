@@ -10,11 +10,14 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Balloons Market</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
     </head>
     <body>
         <jsp:include page="include/Navbar.jsp" />
-        <div class="container mt-5">
+        <div class="container my-5">
+            <h1 class="text-center mt-5">Birth Day set</h1>
             <div class="row mt-5">
                 <c:forEach items="${product}" var="p" varStatus="vs">
                     <div class="col-lg-4 col-sm-6 portfolio-item mt-5">
