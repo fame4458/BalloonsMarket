@@ -98,7 +98,7 @@ insert  into product(productID,productName,productDescription,productType,produc
 (27,'Girl set','-glitter 
 -pink plain latex
 -white plain latex
--"girl" balloon','celebrate',1000,'images/celebrate/cele6.jpg'),
+-"girl" balloon','celebrate',1000,'images/celebrate/cele6.JPG'),
 (28,'Marries set 2','-text','celebrate',1000,'images/celebrate/cele7.jpg'),
 (29,'Marries set 3','-glitter
 -text','celebrate',1000,'images/celebrate/cele8.jpg');
