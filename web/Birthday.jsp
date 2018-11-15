@@ -4,6 +4,7 @@
     Author     : SarinratBeauty
 --%>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -15,17 +16,19 @@
         <jsp:include page="include/Navbar.jsp" />
         <div class="container mt-5">
             <div class="row mt-5">
-                <div class="col-lg-4 col-sm-6 portfolio-item mt-5">
-                    <div class="card h-100">
-                        <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-                        <div class="card-body">
-                            <h4 class="card-title">
-                                <a href="#">Project One</a>
-                            </h4>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur eum quasi sapiente nesciunt? Voluptatibus sit, repellat sequi itaque deserunt, dolores in, nesciunt, illum tempora ex quae? Nihil, dolorem!</p>
+                <c:forEach items="${product}" var="p" varStatus="vs">
+                    <div class="col-lg-4 col-sm-6 portfolio-item mt-5">
+                        <div class="card h-100">
+                            <a href="#"><img class="card-img-top" src="${p.productphoto}" alt=""></a>
+                            <div class="card-body">
+                                <h4 class="card-title">
+                                    ${p.productname}
+                                </h4>
+                                <p class="card-text">${p.productdescription}</p>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </c:forEach>
             </div>
         </div>
     </body>

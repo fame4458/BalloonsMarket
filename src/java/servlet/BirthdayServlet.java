@@ -7,10 +7,18 @@ package servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
+import javax.annotation.Resource;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.PersistenceUnit;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import javax.transaction.UserTransaction;
+import model.Product;
+import model.controller.ProductJpaController;
 
 /**
  *
@@ -18,17 +26,19 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class BirthdayServlet extends HttpServlet {
 
-    /**
-     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
-     * methods.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
+    @PersistenceUnit(unitName = "BalloonsMarketPU1")
+    EntityManagerFactory emf;
+    @Resource
+    UserTransaction utx;
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        ProductJpaController pCtrl = new ProductJpaController(utx, emf);
+        List<Product> p = pCtrl.findType("birth");
+        for (Product product : p) {
+            System.out.println(product);
+        }
+        
+        request.setAttribute("product", p);
         getServletContext().getRequestDispatcher("/Birthday.jsp").forward(request, response);
     }
 
