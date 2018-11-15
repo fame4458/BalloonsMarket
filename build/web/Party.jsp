@@ -17,6 +17,7 @@
     <body>
         <jsp:include page="include/Navbar.jsp" />
         <div class="container my-5">
+            <br>
             <h1 class="text-center mt-5">Party set</h1>
             <div class="row mt-5">
                 <c:forEach items="${product}" var="p" varStatus="vs">
