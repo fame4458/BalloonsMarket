@@ -17,10 +17,10 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="Birthday">BIRTHDAY</a>
+                    <a class="nav-link js-scroll-trigger" href="Party">PARTY</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="Party">PARTY</a>
+                    <a class="nav-link js-scroll-trigger" href="Birthday">BIRTHDAY</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link js-scroll-trigger" href="Celebrate">CELEBRATE</a>
