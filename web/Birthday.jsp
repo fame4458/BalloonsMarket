@@ -23,12 +23,24 @@
                 <c:forEach items="${product}" var="p" varStatus="vs">
                     <div class="col-lg-4 col-sm-6 portfolio-item mt-5">
                         <div class="card h-100">
-                            <a href="#"><img class="card-img-top" src="${p.productphoto}" alt=""></a>
-                            <div class="card-body">
-                                <h4 class="card-title">
-                                    ${p.productname}
-                                </h4>
-                                <p class="card-text">${p.productdescription}</p>
+                            <a href="#"><img class="card-img-top rounded" height="350px" src="${p.productphoto}"></a>
+                            <div class="card-body ">
+                                <div class="col-12 mb-3">
+                                    <h4 class="card-title">
+                                        ${p.productname}
+                                    </h4>
+                                    <p class="card-text">${p.productdescription}</p>
+                                </div>
+                                <form action="cart" method="post">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <input type="number" name="quatity" value="1" min="1" class="form-control">
+                                        </div>
+                                        <div class="col-6">
+                                            <input type="submit" value="buy" class="btn btn-block" style="background-color: darksalmon;color: #fff;">
+                                        </div>
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </div>
