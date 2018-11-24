@@ -108,15 +108,14 @@ insert  into product(productID,productName,productDescription,productType,produc
 
 CREATE TABLE account(
   accID int NOT NULL,
-  userName varchar(50) NOT NULL,
   passWord varchar(50) NOT NULL,
   email varchar(100) NOT NULL,
   PRIMARY KEY (accID)
 ) ;
 
 
-insert into account(accID,userName,passWord,email) values
-(1,'test','test','test@mail.kmutt.ac.th');
+insert into account(accID,passWord,email) values
+(1150,'test','test@mail.kmutt.ac.th');
 
 
 

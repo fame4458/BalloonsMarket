@@ -12,7 +12,6 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <jsp:include page="include/Navbar.jsp" />
-        <h1>HI</h1>
-    </body>
+        <h1>${sessionScope.account}</h1>
+    </body> 
 </html>
