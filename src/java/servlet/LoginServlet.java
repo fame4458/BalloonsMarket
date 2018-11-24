@@ -50,16 +50,17 @@ public class LoginServlet extends HttpServlet {
             int id = Integer.parseInt(user);
             AccountJpaController accCrl = new AccountJpaController(utx, emf);
             Account acc = accCrl.findAccount(id);
-
-            if (pass.equals(acc.getPassword())) {
-                session.setAttribute("account", acc);
-                getServletContext().getRequestDispatcher("/test").forward(request, response);
-                return;
-            } else {
-                getServletContext().getRequestDispatcher("/Login.jsp").forward(request, response);
-                return;
+            
+            if (acc != null) {
+                if (pass.equals(acc.getPassword())) {
+                    session.setAttribute("account", acc);
+                    getServletContext().getRequestDispatcher("/test.jsp").forward(request, response);
+                    return;
+                } else {
+                    getServletContext().getRequestDispatcher("/Login.jsp").forward(request, response);
+                    return;
+                }
             }
-
         }
         getServletContext().getRequestDispatcher("/Login.jsp").forward(request, response);
     }
