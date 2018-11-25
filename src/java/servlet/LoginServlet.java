@@ -49,6 +49,7 @@ public class LoginServlet extends HttpServlet {
         if (user != null & pass != null) {
             AccountJpaController accCrl = new AccountJpaController(utx, emf);
             Account acc = accCrl.findAccountString(user);
+
             
             if (acc != null) {
                 if (pass.equals(acc.getPassword())) {
