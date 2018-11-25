@@ -69,6 +69,13 @@ public class Account implements Serializable {
         this.email = email;
     }
 
+    public Account(String username, String password, String email) {
+        this.username = username;
+        this.password = password;
+        this.email = email;
+    }
+    
+
     public Integer getAccid() {
         return accid;
     }

@@ -18,7 +18,7 @@
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-    <title>JSP Page</title>
+    <title>Register</title>
 </head>
 
 <body style="background-color: darksalmon">
@@ -44,17 +44,15 @@
 
                                 <!--<form id="register-form" action="Register" method="post" role="form" style="display: none;">-->
                                 <form href="Register" method="post" >
-                                    <div class="form-group">
-                                        <input type="password" name="name" id="name" tabindex="2" class="form-control" placeholder="Name">
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="Email Address" value="">
-                                    </div>
+                                    
                                     <div class="form-group">
                                         <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
                                     </div>
                                     <div class="form-group">
                                         <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="Email Address" value="">
                                     </div>
 
                                     <br>
