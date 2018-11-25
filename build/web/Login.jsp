@@ -20,8 +20,8 @@
         <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     </head>
 
-    <!--<<<<<<< HEAD-->
     <body style="background-color: darksalmon">
+
 
 
         <div class="container" style="margin-top: 100px;">

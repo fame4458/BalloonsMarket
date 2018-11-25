@@ -57,7 +57,7 @@ public final class Register_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("    <link href=\"//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css\" rel=\"stylesheet\" id=\"bootstrap-css\">\n");
       out.write("    <script src=\"//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js\"></script>\n");
       out.write("    <script src=\"//code.jquery.com/jquery-1.11.1.min.js\"></script>\n");
-      out.write("    <title>JSP Page</title>\n");
+      out.write("    <title>Register</title>\n");
       out.write("</head>\n");
       out.write("\n");
       out.write("<body style=\"background-color: darksalmon\">\n");
@@ -98,6 +98,12 @@ public final class Register_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\n");
       out.write("                                    <br>\n");
       out.write("                                    <br>\n");
+      out.write("                                    <div class=\"login\">\n");
+      out.write("                                        <center>\n");
+      out.write("                                            <a href=\"Login.jsp\">Login</a>   \n");
+      out.write("                                        </center>\n");
+      out.write("                                        <br>\n");
+      out.write("                                    </div>\n");
       out.write("\n");
       out.write("                                    <div class=\"form-group\">\n");
       out.write("                                        <div class=\"row\">\n");
