@@ -61,7 +61,7 @@
 
                                     <div class="register">
                                         <center>
-                                            <a href="Register">Register</a>   
+                                            <a href="Register.jsp">Register</a>   
                                         </center>
                                         <br>
                                     </div>

@@ -59,6 +59,12 @@
 
                                     <br>
                                     <br>
+                                    <div class="login">
+                                        <center>
+                                            <a href="Login.jsp">Login</a>   
+                                        </center>
+                                        <br>
+                                    </div>
 
                                     <div class="form-group">
                                         <div class="row">
