@@ -25,6 +25,9 @@
                 <li class="nav-item">
                     <a class="nav-link js-scroll-trigger" href="Celebrate">CELEBRATE</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="Login">LOGIN</a>
+                </li>
             </ul>
         </div>
     </div>
