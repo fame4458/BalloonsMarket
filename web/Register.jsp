@@ -37,25 +37,24 @@
                                     <!--<form id="register-form" action="Register" method="post" role="form" style="display: none;">-->
                                     <form href="Register" method="post" >
                                         <div class="form-group">
-                                            <input type="password" name="name" id="name" tabindex="2" class="form-control" placeholder="Name">
+                                            <input type="text" name="username" tabindex="1" class="form-control" placeholder="Username" >
                                         </div>
                                         <div class="form-group">
-                                            <input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="Email Address" value="">
+                                            <input type="password" name="password"  tabindex="1" class="form-control" placeholder="Password">
                                         </div>
                                         <div class="form-group">
-                                            <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
+                                            <input type="email" name="email" tabindex="1" class="form-control" placeholder="Email Address">
                                         </div>
                                         <div class="form-group">
-                                            <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password">
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="row">
-                                                <div class="col-lg-6">
-                                                    <a href="Login" class="btn btn-block" style="background-color: peru ;color: #fff;"> Login </a>
-                                                </div>
-                                                <div class="col-lg-6">
-                                                    <input type="submit" name="register-submit" id="register-submit" tabindex="4" class="btn btn-block" 
-                                                           value="Register Now" style="background-color: peru ;color: #fff;" >
+                                            <div class="form-group">
+                                                <div class="row">
+                                                    <div class="col-lg-6">
+                                                        <a href="Login" class="btn btn-block" style="background-color: peru ;color: #fff;"> Login </a>
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        <input type="submit" tabindex="4" class="btn btn-block" 
+                                                               value="Register Now" style="background-color: peru ;color: #fff;" >
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -66,7 +65,6 @@
                     </div>
                 </div>
             </div>
-        </div>
     </body>
 
 </html>
