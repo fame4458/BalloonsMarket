@@ -36,7 +36,7 @@ public class RegisterServlet extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
-    @PersistenceUnit (unitName = "BalloonsMarketPU1")
+    @PersistenceUnit(unitName = "BalloonsMarketPU1")
     EntityManagerFactory emf;
     @Resource
     UserTransaction utx;
@@ -47,9 +47,9 @@ public class RegisterServlet extends HttpServlet {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
 
-        if (email != null && email.trim().length() > 0 && 
-                username != null && username.trim().length() > 0 &&
-                password != null && password.trim().length() > 0) {
+        if (email != null && email.trim().length() > 0
+                && username != null && username.trim().length() > 0
+                && password != null && password.trim().length() > 0) {
 
             AccountJpaController accCtrl = new AccountJpaController(utx, emf);
             Account account = new Account();
@@ -58,10 +58,11 @@ public class RegisterServlet extends HttpServlet {
             account.setEmail(email);
 
             accCtrl.create(account);
+
             getServletContext().getRequestDispatcher("/index.html").forward(request, response);
             return;
         }
-        
+
         getServletContext().getRequestDispatcher("/Register.jsp").forward(request, response);
 
     }
