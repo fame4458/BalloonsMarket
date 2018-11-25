@@ -151,14 +151,14 @@ public class AccountJpaController implements Serializable {
     
 
 
-//    public Account findAccountString(String id) {
-//        EntityManager em = getEntityManager();
-//        try {
-//            return em.find(Account.class, id);
-//        } finally {
-//            em.close();
-//        }
-//    }
+    public Account findAccountString(String id) {
+        EntityManager em = getEntityManager();
+        try {
+            return em.find(Account.class, id);
+        } finally {
+            em.close();
+        }
+    }
 
 
     public int getAccountCount() {
