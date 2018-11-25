@@ -36,25 +36,34 @@ public class RegisterServlet extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
-    
-    @PersistenceUnit(unitName = "BalloonsMarketPU1")
-    UserTransaction utx;
-    @Resource
+    @PersistenceUnit (unitName = "BalloonsMarketPU1")
     EntityManagerFactory emf;
-    
-    
+    @Resource
+    UserTransaction utx;
+
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException, Exception {
         String email = request.getParameter("email");
         String username = request.getParameter("username");
         String password = request.getParameter("password");
+
+        if (email != null && email.trim().length() > 0 && 
+                username != null && username.trim().length() > 0 &&
+                password != null && password.trim().length() > 0) {
+
+            AccountJpaController accCtrl = new AccountJpaController(utx, emf);
+            Account account = new Account();
+            account.setUsername(username);
+            account.setPassword(password);
+            account.setEmail(email);
+
+            accCtrl.create(account);
+            getServletContext().getRequestDispatcher("/index.html").forward(request, response);
+            return;
+        }
         
-        AccountJpaController accCrl = new AccountJpaController(utx, emf);
-        Account account = new Account(username, password, email);
-    
-        accCrl.create(account);
-        
-        getServletContext().getRequestDispatcher("/Login").forward(request, response);
+        getServletContext().getRequestDispatcher("/Register.jsp").forward(request, response);
+
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

@@ -59,7 +59,7 @@
                                                            value="Login" style="background-color: peru ;color: #fff;" >
                                                 </div>
                                                 <div class="col-lg-6">
-                                                    <a href="Register.jsp" class="btn btn-block" style="background-color: peru ;color: #fff;">Register</a>
+                                                    <a href="Register" class="btn btn-block" style="background-color: peru ;color: #fff;">Register</a>
                                                 </div>
                                             </div>
                                         </div>
