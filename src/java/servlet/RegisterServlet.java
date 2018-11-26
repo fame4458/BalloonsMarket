@@ -43,23 +43,20 @@ public class RegisterServlet extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException, Exception {
-        String email = request.getParameter("email");
-        String username = request.getParameter("username");
-        String password = request.getParameter("password");
-
-        if (email != null && email.trim().length() > 0
-                && username != null && username.trim().length() > 0
-                && password != null && password.trim().length() > 0) {
+        String username = request.getParameter("user");
+        String password = request.getParameter("pass");
+        String email = request.getParameter("mail");
+        
+        
+        if (username != null && password != null) {
 
             AccountJpaController accCtrl = new AccountJpaController(utx, emf);
-            Account account = new Account();
-            account.setUsername(username);
-            account.setPassword(password);
-            account.setEmail(email);
-
-            accCtrl.create(account);
-
-            getServletContext().getRequestDispatcher("/index.html").forward(request, response);
+            Account acc = new Account(username, password, email);
+            
+            accCtrl.create(acc);
+            
+            request.setAttribute("Message", "Register Complete");
+            getServletContext().getRequestDispatcher("/Login").forward(request, response);
             return;
         }
 

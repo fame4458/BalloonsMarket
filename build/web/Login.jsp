@@ -15,26 +15,22 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Login</title>
-       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
         <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     </head>
 
-    <body style="background-color: darksalmon">
+    <body style="background-color: darksalmon;color: #fff;">
 
 
 
-        <div class="container" style="margin-top: 100px;">
+        <div class="container mt-5 text-center">
             <div class="row">
-                <div class="col-md-6 col-md-offset-3">
+                <div class="col-md-12 col-md-offset-3">
                     <div class="panel panel-login">
                         <div class="panel-heading">
-                            <div class="row">
-                                <div class="col-6" >
-                                    <h2 class="text-center mt-5">Login</h2>       
-                                </div>
-
-                            </div>
+                            <h2 class="text-center mt-5">Login</h2>       
+                            <h4 class="text-center mt-3">${Message}</h4>
                             <hr>
                         </div>
 
