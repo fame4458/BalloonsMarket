@@ -17,7 +17,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ml-auto">
+            <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
                     <a class="nav-link js-scroll-trigger" href="Party">PARTY</a>
                 </li>
@@ -27,6 +27,9 @@
                 <li class="nav-item">
                     <a class="nav-link js-scroll-trigger" href="Celebrate">CELEBRATE</a>
                 </li>
+                
+            </ul>
+            <ul class="navbar-nav ml-auto">
                 <c:choose>
                     <c:when test="${sessionScope.account != null}">
                         <li class="nav-item">
