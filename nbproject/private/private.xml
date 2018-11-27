@@ -6,6 +6,12 @@
             <file>file:/C:/Users/POM/Desktop/ProjectWebPro/BalloonsMarket/web/Login.jsp</file>
             <file>file:/C:/Users/POM/Desktop/ProjectWebPro/BalloonsMarket/web/Register.jsp</file>
             <file>file:/C:/Users/POM/Desktop/ProjectWebPro/BalloonsMarket/web/index.html</file>
+            <file>file:/C:/Users/POM/Desktop/ProjectWebPro/BalloonsMarket/src/java/servlet/LoginServlet.java</file>
+            <file>file:/C:/Users/POM/Desktop/ProjectWebPro/BalloonsMarket/web/cart.jsp</file>
+            <file>file:/C:/Users/POM/Desktop/ProjectWebPro/BalloonsMarket/src/java/servlet/RegisterServlet.java</file>
+            <file>file:/C:/Users/POM/Desktop/ProjectWebPro/BalloonsMarket/src/java/servlet/CartServlet.java</file>
+            <file>file:/C:/Users/POM/Desktop/ProjectWebPro/BalloonsMarket/src/java/servlet/AddressServlet.java</file>
+            <file>file:/C:/Users/POM/Desktop/ProjectWebPro/BalloonsMarket/src/java/model/Account.java</file>
         </group>
     </open-files>
 </project-private>

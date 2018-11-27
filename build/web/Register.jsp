@@ -17,55 +17,46 @@
     </head>
 
     <body style="background-color: darksalmon;font-family: 'Caveat', cursive;">
-
-        <div class="container ">
-            <div class="row">
-                <div class="col-md-6 col-md-offset-3">
-                    <div class="panel panel-regis">
+        <div class="container mt-5 text-center">
+            <div class="row" >
+                <div class="col-md-12 col-md-offset-3">
+                    <div class="panel panel-login">
                         <div class="panel-heading">
-                            <div class="row" style="color: black" >
-                                <div class="text-center" >
-                                    <h2>Register</h2>                        
-                                </div>
-                                <hr>
-                            </div>
-                            
-                            <div class="panel-body">
-                                <div class="row">
-                                    <div class="col-lg-12">
-                                        <form id="regis-form" action="Register" method="post" role="form" style="display: block;">
-                                            <div class="form-group">
-                                                <input type="text" name="user" tabindex="1" class="form-control" placeholder="Username" >
-                                            </div>
-                                            <div class="form-group">
-                                                <input type="password" name="pass"  tabindex="1" class="form-control" placeholder="Password">
-                                            </div>
-                                            <div class="form-group">
-                                                <input type="email" name="mail" tabindex="1" class="form-control" placeholder="Email Address">
-                                            </div>
+                            <h2 class="text-center m-5">Register</h2>       
+                            <hr>
+                        </div>
 
-                                             <div class="form-group">
-                                                <div class="row">
-                                                    <div class="col-lg-6">
-                                                        <input type="submit" name="login" tabindex="4" class="btn btn-block" 
-                                                               value="Login" style="background-color: peru ;color: #fff;" >
-                                                    </div>
-                                                    <div class="col-lg-6">
-                                                        <a href="Register" class="btn btn-block" style="background-color: peru ;color: #fff;">Register Now</a>
-                                                    </div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-lg-12">
+
+                                    <form action="Register" method="post">
+                                        <div class="form-group">
+                                            <input type="text" name="user" tabindex="1" class="form-control" placeholder="Username" >
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="password" name="pass"  tabindex="1" class="form-control" placeholder="Password">
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="email" name="mail" tabindex="1" class="form-control" placeholder="Email Address">
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="row">
+                                                <div class="col-lg-6">
+                                                    <a href="Login" class="btn btn-block" style="background-color: peru ;color: #fff;"> Login </a>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <input type="submit" tabindex="4" class="btn btn-block" value="Register Now" style="background-color: peru ;color: #fff;" >
                                                 </div>
                                             </div>
-                                        </form>
-
-                                    </div>
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-</body>
+    </body>
 
 </html>
