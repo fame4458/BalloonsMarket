@@ -13,9 +13,10 @@
         <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
         <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
         <title>Balloons Market</title>
+        <link href="https://fonts.googleapis.com/css?family=Caveat:400,700" rel="stylesheet">
     </head>
 
-    <body style="background-color: darksalmon;">
+    <body style="background-color: darksalmon;font-family: 'Caveat', cursive;">
         <div class="container mt-5 text-center">
             <div class="row" >
                 <div class="col-md-12 col-md-offset-3">

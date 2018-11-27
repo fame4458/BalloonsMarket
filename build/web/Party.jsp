@@ -12,9 +12,9 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Balloons Market</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
+        <link href="https://fonts.googleapis.com/css?family=Caveat:400,700" rel="stylesheet">
     </head>
-    <body>
+    <body style="font-family: 'Caveat', cursive;">
         <jsp:include page="include/Navbar.jsp" />
         <div class="container my-5">
             <br>
