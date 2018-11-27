@@ -4,6 +4,8 @@
     Author     : FAME
 --%>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -25,9 +27,21 @@
                 <li class="nav-item">
                     <a class="nav-link js-scroll-trigger" href="Celebrate">CELEBRATE</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="Login">LOGIN</a>
-                </li>
+                <c:choose>
+                    <c:when test="${sessionScope.account != null}">
+                        <li class="nav-item">
+                            <a class="nav-link" style="cursor: no-drop;">${sessionScope.account.username}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger" href="Logout">LOGOUT</a>
+                        </li>
+                    </c:when>
+                    <c:otherwise>
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger" href="Login">LOGIN</a>
+                        </li>
+                    </c:otherwise>
+                </c:choose>
             </ul>
         </div>
     </div>

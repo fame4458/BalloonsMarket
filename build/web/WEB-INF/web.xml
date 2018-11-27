@@ -36,6 +36,10 @@
         <servlet-name>AddressServlet</servlet-name>
         <servlet-class>servlet.AddressServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>newIndex</servlet-name>
+        <servlet-class>servlet.newIndex</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>test</servlet-name>
         <url-pattern>/test</url-pattern>
@@ -71,6 +75,10 @@
     <servlet-mapping>
         <servlet-name>AddressServlet</servlet-name>
         <url-pattern>/Address</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>newIndex</servlet-name>
+        <url-pattern>/newIndex</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

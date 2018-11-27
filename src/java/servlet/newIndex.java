@@ -7,23 +7,17 @@ package servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import javax.annotation.Resource;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.PersistenceUnit;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import javax.transaction.UserTransaction;
-import model.Account;
-import model.controller.AccountJpaController;
 
 /**
  *
- * @author Student
+ * @author SarinratBeauty
  */
-public class LoginServlet extends HttpServlet {
+public class newIndex extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -34,35 +28,16 @@ public class LoginServlet extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
-    @PersistenceUnit(unitName = "BalloonsMarketPU1")
-    EntityManagerFactory emf;
-
-    @Resource
-    UserTransaction utx;
-
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String user = request.getParameter("username");
-        String pass = request.getParameter("password");
         HttpSession session = request.getSession();
-
-        if (user != null & pass != null) {
-            AccountJpaController accCrl = new AccountJpaController(utx, emf);
-            Account acc = accCrl.findAccountString(user);
-
-            
-            if (acc != null) {
-                if (pass.equals(acc.getPassword())) {
-                    session.setAttribute("account", acc);
-                    getServletContext().getRequestDispatcher("/newIndex").forward(request, response);
-                    return;
-                } else {
-                    getServletContext().getRequestDispatcher("/Login.jsp").forward(request, response);
-                    return;
-                }
-            }
+        
+        if (session == null && session.getAttribute("account") == null) {
+            request.setAttribute("Message", "Login Unsuccessful");
+            getServletContext().getRequestDispatcher("/Login").forward(request, response);
+            return;
         }
-        getServletContext().getRequestDispatcher("/Login.jsp").forward(request, response);
+        getServletContext().getRequestDispatcher("/newIndex.jsp").forward(request, response);
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
