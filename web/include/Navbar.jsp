@@ -30,7 +30,7 @@
                 <c:choose>
                     <c:when test="${sessionScope.account != null}">
                         <li class="nav-item">
-                            <a class="nav-link" style="cursor: no-drop;">${sessionScope.account.username}</a>
+                            <a class="nav-link" style="text-transform: uppercase;cursor: default;color:#fff;">${sessionScope.account.username}</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link js-scroll-trigger" href="Logout">LOGOUT</a>

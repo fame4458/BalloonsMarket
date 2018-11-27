@@ -33,7 +33,6 @@ public class newIndex extends HttpServlet {
         HttpSession session = request.getSession();
         
         if (session == null && session.getAttribute("account") == null) {
-            request.setAttribute("Message", "Login Unsuccessful");
             getServletContext().getRequestDispatcher("/Login").forward(request, response);
             return;
         }
