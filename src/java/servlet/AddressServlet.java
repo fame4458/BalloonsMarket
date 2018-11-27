@@ -31,9 +31,9 @@ public class AddressServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         HttpSession session = request.getSession();
-        if(session.getAttribute("account")!=null){
-            getServletContext().getRequestDispatcher("Address.jsp").forward(request, response);
-        }
+//        if(session.getAttribute("account")!=null){
+            getServletContext().getRequestDispatcher("/Address.jsp").forward(request, response);
+//        }
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

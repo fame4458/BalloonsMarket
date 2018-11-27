@@ -68,10 +68,10 @@
         <servlet-name>RegisterServlet</servlet-name>
         <url-pattern>/Register</url-pattern>
     </servlet-mapping>
-    <servlet-mapping>
+<!--    <servlet-mapping>
         <servlet-name>CartServlet</servlet-name>
         <url-pattern>/Cart</url-pattern>
-    </servlet-mapping>
+    </servlet-mapping>-->
     <servlet-mapping>
         <servlet-name>AddressServlet</servlet-name>
         <url-pattern>/Address</url-pattern>

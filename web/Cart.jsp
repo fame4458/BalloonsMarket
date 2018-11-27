@@ -1,6 +1,6 @@
 <%-- 
-    Document   : cart
-    Created on : Nov 26, 2018, 8:07:34 PM
+    Document   : Cart
+    Created on : Nov 28, 2018, 3:25:53 AM
     Author     : POM
 --%>
 
@@ -12,11 +12,10 @@
         <title>Balloons Market</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         <link href="https://fonts.googleapis.com/css?family=Caveat:400,700" rel="stylesheet">
+       
     </head>
-
     <body style="background-color: darksalmon; color: #fff;font-family: 'Caveat', cursive;">
         <h1 class="m-5 text-center">Your Cart</h1>
-
 
         <table class="table mt-5">
             <thead  style="background-color: peru">
@@ -61,8 +60,7 @@
             <a href="index.html" style="color: #fff">Back</a>
         </div>
 
-
-
     </body>
 
 </html>
+

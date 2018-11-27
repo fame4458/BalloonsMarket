@@ -68,7 +68,7 @@ public final class Login_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <div class=\"container \">\r\n");
       out.write("            <div class=\"row\">\r\n");
       out.write("                <div class=\"col-md-6 col-md-offset-3\">\r\n");
-      out.write("                    <div class=\"panel-login\">\r\n");
+      out.write("                    <div class=\"panel panel-login\">\r\n");
       out.write("                        <div class=\"panel-heading\">\r\n");
       out.write("                            <div class=\"row\" style=\"color: black\" >\r\n");
       out.write("                                <div class=\"text-center\" >\r\n");
@@ -79,6 +79,7 @@ public final class Login_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                                </div>\r\n");
       out.write("                                <hr>\r\n");
       out.write("                            </div>\r\n");
+      out.write("                                \r\n");
       out.write("                            <div class=\"panel-body\">\r\n");
       out.write("                                <div class=\"row\">\r\n");
       out.write("                                    <div class=\"col-lg-12\">\r\n");

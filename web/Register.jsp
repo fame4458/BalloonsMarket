@@ -57,6 +57,11 @@
                     </div>
                 </div>
             </div>
+        </div>
+        
+         <div class="m-2 text-center">
+            <a href="index.html" style="color: #fff">Back</a>
+        </div>
     </body>
 
 </html>
