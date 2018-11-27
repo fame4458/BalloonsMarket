@@ -121,22 +121,10 @@ insert into account(userName,passWord,email) values
 
 
 CREATE TABLE favorite(
-  favID int NOT NULL,
+  favID int primary key generated always as identity (start with 1,increment by 1),
   accID int NOT NULL,
-  productID int NOT NULL,
-  PRIMARY KEY (favID),
-  CONSTRAINT favorite_idfk_1 FOREIGN KEY (accID) REFERENCES account (accID),
-  CONSTRAINT favorite_pidfk_2 FOREIGN KEY (productID) REFERENCES product (productID)
+  productID int NOT NULL
 ) ;
-
-CREATE TABLE cart(
-  cartID int NOT NULL,
-  accID int NOT NULL,
-  productID int NOT NULL,
-  PRIMARY KEY (cartID),
-  CONSTRAINT cart_idfk_1 FOREIGN KEY (accID) REFERENCES account (accID),
-  CONSTRAINT cart_pidfk_2 FOREIGN KEY (productID) REFERENCES product (productID)
-);
 
 
 
