@@ -16,12 +16,11 @@ import javax.persistence.criteria.Root;
 import javax.transaction.UserTransaction;
 import model.Account;
 import model.controller.exceptions.NonexistentEntityException;
-import model.controller.exceptions.PreexistingEntityException;
 import model.controller.exceptions.RollbackFailureException;
 
 /**
  *
- * @author FAME
+ * @author SarinratBeauty
  */
 public class AccountJpaController implements Serializable {
 
@@ -36,7 +35,7 @@ public class AccountJpaController implements Serializable {
         return emf.createEntityManager();
     }
 
-    public void create(Account account) throws PreexistingEntityException, RollbackFailureException, Exception {
+    public void create(Account account) throws RollbackFailureException, Exception {
         EntityManager em = null;
         try {
             utx.begin();
@@ -48,9 +47,6 @@ public class AccountJpaController implements Serializable {
                 utx.rollback();
             } catch (Exception re) {
                 throw new RollbackFailureException("An error occurred attempting to roll back the transaction.", re);
-            }
-            if (findAccount(account.getAccid()) != null) {
-                throw new PreexistingEntityException("Account " + account + " already exists.", ex);
             }
             throw ex;
         } finally {
@@ -149,7 +145,7 @@ public class AccountJpaController implements Serializable {
         }
     }
     
-    public Account findAccountString(String id) {
+     public Account findAccountString(String id) {
         EntityManager em = getEntityManager();
         try {
             Query q = em.createNamedQuery("Account.findByUsername");
@@ -161,6 +157,7 @@ public class AccountJpaController implements Serializable {
             em.close();
         }
     }
+
 
     public int getAccountCount() {
         EntityManager em = getEntityManager();

@@ -51,7 +51,10 @@ public class RegisterServlet extends HttpServlet {
         if (username != null && password != null) {
 
             AccountJpaController accCtrl = new AccountJpaController(utx, emf);
-            Account acc = new Account(username, password, email);
+            Account acc = new Account();
+            acc.setUsername(username);
+            acc.setPassword(password);
+            acc.setEmail(email);
             
             accCtrl.create(acc);
             
