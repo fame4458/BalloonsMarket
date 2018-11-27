@@ -55,6 +55,7 @@ public class LoginServlet extends HttpServlet {
                     getServletContext().getRequestDispatcher("/newIndex").forward(request, response);
                     return;
                 } else {
+                    request.setAttribute("Message", "Login unsuccessful");
                     getServletContext().getRequestDispatcher("/Login.jsp").forward(request, response);
                     return;
                 }
