@@ -16,10 +16,35 @@
     </head>
     <body style="font-family: 'Caveat', cursive;">
         <jsp:include page="include/Navbar.jsp" />
+        <br>
+
         <div class="container my-5">
-            <br>
+            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-10 col-lg-5 ml-auto" >
+                        <form class="card card-sm" >
+                            <div class="card-body row no-gutters align-items-center">
+                                <div class="col-auto col-1">
+                                    <i class="fas fa-search h4 text-body"></i>
+                                </div>
+
+                                <div class="col" >
+                                    <input class="form-control form-control-lg form-control-borderless" style="background-color:bisque"  type="search" placeholder="Search our balloons">
+                                </div>
+
+                                <div class="col-auto ">
+                                    <button class="btn btn-lg" style="background-color: peru; color: #fff" type="submit">Search</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+        <div class="container">
             <h1 class="text-center mt-5">Celebrate set</h1>
-            <div class="row mt-5">
+            <div class="row mt-2">
                 <c:forEach items="${product}" var="p" varStatus="vs">
                     <div class="col-lg-4 col-sm-6 portfolio-item mt-5">
                         <div class="card h-100">
