@@ -115,6 +115,8 @@ public final class Address_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("            <a href=\"Cart.jsp\" style=\"color: #fff\">Back</a>\n");
       out.write("        </div>\n");
       out.write("\n");
+      out.write("        \n");
+      out.write("       <!--pop up Code-->\n");
       out.write("        <div class=\"popup\" onclick=\"myFunction()\">Click me!\n");
       out.write("            <span class=\"popuptext\" id=\"myPopup\">Thank You</span>\n");
       out.write("        </div>\n");
