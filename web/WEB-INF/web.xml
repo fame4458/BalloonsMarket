@@ -40,6 +40,10 @@
         <servlet-name>newIndex</servlet-name>
         <servlet-class>servlet.newIndex</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>SearchServlet</servlet-name>
+        <servlet-class>servlet.SearchServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>test</servlet-name>
         <url-pattern>/test</url-pattern>
@@ -68,7 +72,7 @@
         <servlet-name>RegisterServlet</servlet-name>
         <url-pattern>/Register</url-pattern>
     </servlet-mapping>
-<!--    <servlet-mapping>
+    <!--    <servlet-mapping>
         <servlet-name>CartServlet</servlet-name>
         <url-pattern>/Cart</url-pattern>
     </servlet-mapping>-->
@@ -79,6 +83,10 @@
     <servlet-mapping>
         <servlet-name>newIndex</servlet-name>
         <url-pattern>/newIndex</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SearchServlet</servlet-name>
+        <url-pattern>/Search</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
