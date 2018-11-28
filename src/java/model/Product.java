@@ -6,11 +6,9 @@
 package model;
 
 import java.io.Serializable;
-import java.util.List;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.EntityManager;
 import javax.persistence.Id;
 import javax.persistence.Lob;
 import javax.persistence.NamedQueries;
@@ -22,7 +20,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
- * @author SarinratBeauty
+ * @author FAME
  */
 @Entity
 @Table(name = "PRODUCT")
@@ -33,10 +31,7 @@ import javax.xml.bind.annotation.XmlRootElement;
     , @NamedQuery(name = "Product.findByProductname", query = "SELECT p FROM Product p WHERE p.productname = :productname")
     , @NamedQuery(name = "Product.findByProducttype", query = "SELECT p FROM Product p WHERE p.producttype = :producttype")
     , @NamedQuery(name = "Product.findByProductprice", query = "SELECT p FROM Product p WHERE p.productprice = :productprice")
-    , @NamedQuery(name = "Product.findByProductphoto", query = "SELECT p FROM Product p WHERE p.productphoto = :productphoto")
-    ,  @NamedQuery(name = "Product.findByProductAll", query = "SELECT p FROM Product p WHERE lower(p.productname) LIKE lower(:productname)"
-            + "AND lower(p.producttype) LIKE lower(:producttype)")
-})
+    , @NamedQuery(name = "Product.findByProductphoto", query = "SELECT p FROM Product p WHERE p.productphoto = :productphoto")})
 public class Product implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -134,7 +129,6 @@ public class Product implements Serializable {
         this.productphoto = productphoto;
     }
 
-    //---------------------------------------------------------------------
     @Override
     public int hashCode() {
         int hash = 0;
@@ -159,5 +153,5 @@ public class Product implements Serializable {
     public String toString() {
         return "model.Product[ productid=" + productid + " ]";
     }
-
+    
 }

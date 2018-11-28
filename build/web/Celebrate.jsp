@@ -48,6 +48,7 @@
                     </div>   
                 </div>
             </div>
+            <<<<<<< HEAD
 
             <div class="container">
                 <h1 class="text-center mt-5">Celebrate set</h1>
@@ -63,12 +64,13 @@
                                         </h4>
                                         <p class="card-text">${p.productdescription}</p>
                                     </div>
-                                    <form action="cart" method="post">
+                                    <form action="AddToCart" method="post">
                                         <div class="row">
                                             <div class="col-6">
                                                 <input type="number" name="quatity" value="1" min="1" class="form-control">
                                             </div>
                                             <div class="col-6">
+                                                <input type="hidden" value="${p.productid}" name="productid" />
                                                 <input type="submit" value="buy" class="btn btn-block" style="background-color: darksalmon;color: #fff;">
                                             </div>
                                         </div>

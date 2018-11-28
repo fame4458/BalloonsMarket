@@ -21,7 +21,7 @@ import model.controller.exceptions.RollbackFailureException;
 
 /**
  *
- * @author SarinratBeauty
+ * @author FAME
  */
 public class ProductJpaController implements Serializable {
 
@@ -148,7 +148,7 @@ public class ProductJpaController implements Serializable {
             em.close();
         }
     }
-
+    
     public List<Product> findType(String type) {
         EntityManager em = getEntityManager();
         try {
@@ -160,21 +160,7 @@ public class ProductJpaController implements Serializable {
         }
     }
 
-    public int getProductCount() {
-        EntityManager em = getEntityManager();
-        try {
-            CriteriaQuery cq = em.getCriteriaBuilder().createQuery();
-            Root<Product> rt = cq.from(Product.class);
-            cq.select(em.getCriteriaBuilder().count(rt));
-            Query q = em.createQuery(cq);
-            return ((Long) q.getSingleResult()).intValue();
-        } finally {
-            em.close();
-        }
-    }
-
-    //--------------------------------------------
-    public List<Product> findByProductName(String name) {
+  public List<Product> findByProductName(String name) {
         EntityManager em = getEntityManager();
         try {
             Query query = em.createNamedQuery("Product.findByProductname");
@@ -208,4 +194,17 @@ public class ProductJpaController implements Serializable {
         }
     }
 
+    public int getProductCount() {
+        EntityManager em = getEntityManager();
+        try {
+            CriteriaQuery cq = em.getCriteriaBuilder().createQuery();
+            Root<Product> rt = cq.from(Product.class);
+            cq.select(em.getCriteriaBuilder().count(rt));
+            Query q = em.createQuery(cq);
+            return ((Long) q.getSingleResult()).intValue();
+        } finally {
+            em.close();
+        }
+    }
+    
 }

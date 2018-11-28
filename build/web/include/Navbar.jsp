@@ -34,21 +34,16 @@
                 <li class="nav-item">
                     <a class="nav-link js-scroll-trigger" href="Celebrate">CELEBRATE</a>
                 </li>
-                
+
             </ul>
             <ul class="navbar-nav ml-auto">
                 <c:choose>
-                    
+
                     <c:when test="${sessionScope.account != null}">
-                        
-                        <a href="Fav">
-                           <i class='fas fa-heart' style='font-size:30px; color:#fff'></i>
-                        </a>
-                        <a href="Fav" style="margin-left: 10px">
-                           <i class='fas fa-shopping-cart' style='font-size:30px; color:#fff'></i>
-                        </a>
-                        
-                        <li class="nav-item" >
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger" href="ShowCart">CART</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" style="text-transform: uppercase;cursor: default;color:#fff;">${sessionScope.account.username}</a>
                         </li>
                         <li class="nav-item">
@@ -64,5 +59,5 @@
             </ul>
         </div>
     </div>
-    
+
 </nav>

@@ -41,6 +41,12 @@
         <servlet-class>servlet.newIndex</servlet-class>
     </servlet>
     <servlet>
+        <servlet-name>AddToCartServlet</servlet-name>
+        <servlet-class>servlet.AddToCartServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ShowCartServlet</servlet-name>
+        <servlet-class>servlet.ShowCartServlet</servlet-class>
         <servlet-name>SearchServlet</servlet-name>
         <servlet-class>servlet.SearchServlet</servlet-class>
     </servlet>
@@ -72,10 +78,6 @@
         <servlet-name>RegisterServlet</servlet-name>
         <url-pattern>/Register</url-pattern>
     </servlet-mapping>
-    <!--    <servlet-mapping>
-        <servlet-name>CartServlet</servlet-name>
-        <url-pattern>/Cart</url-pattern>
-    </servlet-mapping>-->
     <servlet-mapping>
         <servlet-name>AddressServlet</servlet-name>
         <url-pattern>/Address</url-pattern>
@@ -85,6 +87,12 @@
         <url-pattern>/newIndex</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
+        <servlet-name>AddToCartServlet</servlet-name>
+        <url-pattern>/AddToCart</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ShowCartServlet</servlet-name>
+        <url-pattern>/ShowCart</url-pattern>
         <servlet-name>SearchServlet</servlet-name>
         <url-pattern>/Search</url-pattern>
     </servlet-mapping>
