@@ -16,7 +16,7 @@
     </head>
     <body style="font-family: 'Caveat', cursive;">
         <jsp:include page="include/Navbar.jsp" />
-         <br>
+        <br>
 
         <div class="container my-5">
             <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
@@ -41,36 +41,37 @@
                     </div>
                 </div>
             </div>
-            
-        <div class="container">
-            <h1 class="text-center mt-5">Birth Day set</h1>
-            <div class="row mt-2">
-                <c:forEach items="${product}" var="p" varStatus="vs">
-                    <div class="col-lg-4 col-sm-6 portfolio-item mt-5">
-                        <div class="card h-100">
-                            <a href="#"><img class="card-img-top rounded" height="350px" src="${p.productphoto}"></a>
-                            <div class="card-body ">
-                                <div class="col-12 mb-3">
-                                    <h4 class="card-title">
-                                        ${p.productname}
-                                    </h4>
-                                    <p class="card-text">${p.productdescription}</p>
-                                </div>
-                                <form action="cart" method="post">
-                                    <div class="row">
-                                        <div class="col-6">
-                                            <input type="number" name="quatity" value="1" min="1" class="form-control">
-                                        </div>
-                                        <div class="col-6">
-                                            <input type="submit" value="buy" class="btn btn-block" style="background-color: darksalmon;color: #fff;">
-                                        </div>
+
+            <div class="container">
+                <h1 class="text-center mt-5">Birth Day set</h1>
+                <div class="row mt-2">
+                    <c:forEach items="${product}" var="p" varStatus="vs">
+                        <div class="col-lg-4 col-sm-6 portfolio-item mt-5">
+                            <div class="card h-100">
+                                <a href="#"><img class="card-img-top rounded" height="350px" src="${p.productphoto}"></a>
+                                <div class="card-body ">
+                                    <div class="col-12 mb-3">
+                                        <h4 class="card-title">
+                                            ${p.productname}
+                                        </h4>
+                                        <p class="card-text">${p.productdescription}</p>
                                     </div>
-                                </form>
+                                    <form action="AddToCart" method="post">
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <input type="number" name="quatity" value="1" min="1" class="form-control">
+                                            </div>
+                                            <div class="col-6">
+                                                <input type="hidden" value="${p.productid}" name="productid" />
+                                                <input type="submit" value="buy" class="btn btn-block" style="background-color: darksalmon;color: #fff;">
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </c:forEach>
+                    </c:forEach>
+                </div>
             </div>
-        </div>
     </body>
 </html>

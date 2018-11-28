@@ -4,6 +4,7 @@
     Author     : POM
 --%>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -20,31 +21,22 @@
         <table class="table mt-5">
             <thead  style="background-color: peru">
                 <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">First</th>
-                    <th scope="col">Last</th>
-                    <th scope="col">Handle</th>
+                    <th scope="col">Image</th>
+                    <th scope="col">Product Name</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Price</th>
                 </tr>
             </thead>
             <tbody style="background-color: #fff; color: black">
+            <c:set var="items" value="${sessionScope.cart.lineItems}" />
+            <c:forEach items="${cart.lineItems}" var="line" varStatus="vs">
                 <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
+                    <td><img height="200px" src="${line.product.productphoto}"></td>
+                    <td>${line.product.productname}</td>
+                    <td>${line.quanlity}</td>
+                    <td>${line.product.productprice}</td>
                 </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>@twitter</td>
-                </tr>
+            </c:forEach>
             </tbody>
         </table>
 
