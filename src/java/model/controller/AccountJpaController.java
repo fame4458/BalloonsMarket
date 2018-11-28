@@ -20,7 +20,7 @@ import model.controller.exceptions.RollbackFailureException;
 
 /**
  *
- * @author SarinratBeauty
+ * @author FAME
  */
 public class AccountJpaController implements Serializable {
 
@@ -145,7 +145,7 @@ public class AccountJpaController implements Serializable {
         }
     }
     
-     public Account findAccountString(String id) {
+    public Account findAccountString(String id) {
         EntityManager em = getEntityManager();
         try {
             Query q = em.createNamedQuery("Account.findByUsername");
@@ -157,7 +157,6 @@ public class AccountJpaController implements Serializable {
             em.close();
         }
     }
-
 
     public int getAccountCount() {
         EntityManager em = getEntityManager();
