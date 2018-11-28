@@ -19,8 +19,8 @@
     <body style="background-color: darksalmon;font-family: 'Caveat', cursive;">
         <div class="container mt-5 text-center">
             <div class="row" >
-                <div class="col-md-12 col-md-offset-3">
-                    <div class="panel panel-login">
+                <div class="col-md-12 col-md-offset-3" style="background-color: #fff;border-radius: .2em;">
+                    <div class="panel panel-register">
                         <div class="panel-heading">
                             <h2 class="text-center m-5">Register</h2>       
                             <hr>
@@ -59,8 +59,8 @@
             </div>
         </div>
         
-         <div class="m-2 text-center">
-            <a href="index.html" style="color: #fff">Back</a>
+         <div class="mt-5 text-center">
+             <a href="index.html" style="color: #fff"><h4>Back</h4></a>
         </div>
     </body>
 
