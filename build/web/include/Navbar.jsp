@@ -10,6 +10,7 @@
 <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Caveat:400,700" rel="stylesheet">
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.5.0/css/all.css' integrity='sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU' crossorigin='anonymous'>
     <style>
         nav{
             font-family: 'Caveat', cursive;
@@ -37,8 +38,17 @@
             </ul>
             <ul class="navbar-nav ml-auto">
                 <c:choose>
+                    
                     <c:when test="${sessionScope.account != null}">
-                        <li class="nav-item">
+                        
+                        <a href="Fav">
+                           <i class='fas fa-heart' style='font-size:30px; color:#fff'></i>
+                        </a>
+                        <a href="Fav" style="margin-left: 10px">
+                           <i class='fas fa-shopping-cart' style='font-size:30px; color:#fff'></i>
+                        </a>
+                        
+                        <li class="nav-item" >
                             <a class="nav-link" style="text-transform: uppercase;cursor: default;color:#fff;">${sessionScope.account.username}</a>
                         </li>
                         <li class="nav-item">
@@ -54,4 +64,5 @@
             </ul>
         </div>
     </div>
+    
 </nav>

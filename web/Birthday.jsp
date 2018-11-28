@@ -23,27 +23,34 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12 col-md-10 col-lg-5 ml-auto" >
-                       <form class="card card-sm" action="Search" method="post">
+                        <form class="card card-sm" action="Search" method="post">
                             <div class="card-body row no-gutters align-items-center">
                                 <div class="col-auto col-1">
                                     <i class="fas fa-search h4 text-body"></i>
-                                </div>
-
+                                </div> 
                                 <div class="col" >
-                                    <input class="form-control form-control-lg form-control-borderless" style="background-color:bisque"  type="search" placeholder="Search our balloons">
+                                    <input class="form-control form-control-lg form-control-borderless" style="background-color:bisque"  type="search" placeholder="Search our balloons" name="name">
                                 </div>
+                                
+                                    <select name="type" style="height: 45px; margin-left: 5px; margin-right: 5px; background-color: bisque">
+                                        <option value="Type">Type</option>
+                                        <option value="party">Party</option>
+                                        <option value="birth">Birthday</option>
+                                        <option value="celebrate">Celebrate</option>
+                                    </select>
+                                
 
                                 <div class="col-auto ">
                                     <button class="btn btn-lg" style="background-color: peru; color: #fff" type="submit">Search</button>
                                 </div>
                             </div>
                         </form>
-                    </div>
+                    </div>   
                 </div>
             </div>
             
         <div class="container">
-            <h1 class="text-center mt-5">Birth Day set</h1>
+            <h1 class="text-center mt-5">Birthday set</h1>
             <div class="row mt-2">
                 <c:forEach items="${product}" var="p" varStatus="vs">
                     <div class="col-lg-4 col-sm-6 portfolio-item mt-5">
@@ -72,5 +79,16 @@
                 </c:forEach>
             </div>
         </div>
+            
+        </div>
+            <div class="container-fluid" style="background-color: darksalmon">
+            <div class="container">
+                <p class="m-0 text-center text-white">Copyright &copy; Balloons Market</p>
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     </body>
 </html>
