@@ -33,7 +33,7 @@
         <br>
         <div class="container ">
             <div class="row">
-                <div class="col-md-6 col-md-offset-3">
+                <div class="col-md-6 col-md-offset-3" style="background-color: #fff;border-radius: .2em;">
                     <div class="panel panel-login">
                         <div class="panel-heading">
                             <div class="row" style="color: black" >
@@ -76,8 +76,8 @@
             </div>
         </div>
 
-        <div class="m-2 text-center">
-            <a href="index.html" style="color: #fff">Back</a>
+        <div class="mt-5 text-center">
+            <a href="index.html" style="color: #fff"><h4>Back</h4></a>
         </div>
     </body>
 </html>
