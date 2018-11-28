@@ -23,7 +23,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12 col-md-10 col-lg-5 ml-auto" >
-                        <form class="card card-sm" >
+                       <form class="card card-sm" action="Search" method="post">
                             <div class="card-body row no-gutters align-items-center">
                                 <div class="col-auto col-1">
                                     <i class="fas fa-search h4 text-body"></i>

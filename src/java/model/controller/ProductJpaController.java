@@ -148,7 +148,7 @@ public class ProductJpaController implements Serializable {
             em.close();
         }
     }
-    
+
     public List<Product> findType(String type) {
         EntityManager em = getEntityManager();
         try {
@@ -172,5 +172,40 @@ public class ProductJpaController implements Serializable {
             em.close();
         }
     }
-    
+
+    //--------------------------------------------
+    public List<Product> findByProductName(String name) {
+        EntityManager em = getEntityManager();
+        try {
+            Query query = em.createNamedQuery("Product.findByProductname");
+            query.setParameter("productname", name);
+            return query.getResultList();
+        } finally {
+            em.close();
+        }
+    }
+
+    public List<Product> findByProductType(String type) {
+        EntityManager em = getEntityManager();
+        try {
+            Query query = em.createNamedQuery("Product.findByProducttype");
+            query.setParameter("producttype", type);
+            return query.getResultList();
+        } finally {
+            em.close();
+        }
+    }
+
+    public List<Product> findByProductAll(String name, String type) {
+        EntityManager em = getEntityManager();
+        try {
+            Query query = em.createNamedQuery("Product.findByProductAll");
+            query.setParameter("productname", "%" + name + "%");
+            query.setParameter("producttype", "%" + type + "%");
+            return query.getResultList();
+        } finally {
+            em.close();
+        }
+    }
+
 }

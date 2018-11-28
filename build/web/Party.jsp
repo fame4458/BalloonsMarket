@@ -24,22 +24,29 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12 col-md-10 col-lg-5 ml-auto" >
-                        <form class="card card-sm" >
+                        <form class="card card-sm" action="Search" method="post">
                             <div class="card-body row no-gutters align-items-center">
                                 <div class="col-auto col-1">
                                     <i class="fas fa-search h4 text-body"></i>
-                                </div>
-
+                                </div> 
                                 <div class="col" >
-                                    <input class="form-control form-control-lg form-control-borderless" style="background-color:bisque"  type="search" placeholder="Search our balloons">
+                                    <input class="form-control form-control-lg form-control-borderless" style="background-color:bisque"  type="search" placeholder="Search our balloons" name="name">
                                 </div>
-
+                                <select name="type">
+                                    <option value="Type">Type</option>
+                                    <option value="party">Party</option>
+                                    <option value="birth">Birthday</option>
+                                    <option value="celebrate">Celebrate</option>
+                                </select>
                                 <div class="col-auto ">
                                     <button class="btn btn-lg" style="background-color: peru; color: #fff" type="submit">Search</button>
                                 </div>
                             </div>
                         </form>
-                    </div>
+                        
+                        
+ 
+                    </div>   
                 </div>
             </div>
 
